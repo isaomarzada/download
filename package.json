@@ -4,7 +4,8 @@
   "description": "",
   "main": "\u001b[\u001b[C\u001bserver\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dsrc/\u001b[C\u001bserv\u001b[er.js)",
   "scripts": {
-    "test": "set NODE_ENV=test&& jasmine"
+    "test": "set NODE_ENV=test&& jasmine",
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
