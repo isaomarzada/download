@@ -8,48 +8,50 @@
           }
     </script>
     <style>
-      #container {
-        height: 100vh;
-        width: 40%;
-        background-color: lightblue;
-        position: absolute;
-        left: 50%;
-        margin-left: -20%;
-      }
+
 
       #links {
-        float: left;
-        padding: 20px;
-        text-align: left;
-        width: 10%;
-        margin-top: 140px;
+        text-align: center;
+        z-index: 800;
+        position: fixed;
+        font-size: 2em;
+        align-items: center;
+        margin-left: 7%;
+        width: 100%;
+        left: 50%;
+        margin-left: -50%;
       }
+
+      a {
+        text-decoration: none;
+        margin-top: 200px;
+        margin-right: 100px;
+      }
+
+      #img {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index; 0;
+      }
+
+
     </style>
   </head>
   <body>
-     <section id='container'>
+    <div class='top'>
+     <div id='container'>
       <div id='links'>
-       <a href="/downloadBook" target="_blank">Book</a>
-       <a href="/downloadbee" target="_blank">Bee</a>
-       <a href="/downloadbeetle" target="_blank">Beetle</a>
-       <a href="/downloadcat" target="_blank">Cat</a>
-       <a href="/downloadcow" target="_blank">Cow</a>
-       <a href="/downloaddinosaur" target="_blank">Dinosaur</a>
-       <a href="/downloaddog" target="_blank">Dog</a>
-       <a href="/downloadelephant" target="_blank">Elephant</a>
-       <a href="/downloadgrasshopper" target="_blank">Grasshopper</a>
-       <a href="/downloadhippo" target="_blank">Hippo</a>
-       <a href="/downloadhog" target="_blank">Hog</a>
-       <a href="/downloadlion" target="_blank">Lion</a>
-       <a href="/downloadlizard" target="_blank">Lizard</a>
-       <a href="/downloadscorpion" target="_blank">Scorpion</a>
-       <a href="/downloadshark" target="_blank">Shark</a>
-       <a href="/downloadsnake" target="_blank">Snake</a>
-       <a href="/downloadspider" target="_blank">Spider</a>
-       <a href="/downloadTiger" target="_blank">Tiger</a>
-       <a href="/downloadbeetlewasp" target="_blank">Wasp</a>
-       <a href="/downloadwhale" target="_blank">Whale</a>
+       <a href="/downloadBook" target="_blank">Download Book</a>
+       <a href="/downloadbee" target="_blank">Download Bee</a>
+       <a href="/downloadbeetle" target="_blank">Download Beetle</a>
+       <a href="/downloadcat" target="_blank">Download Cat</a>
+
       </div>
-     </section>
+     </div>
+     <img src="/pdfFolder/downloading.png" id='img' height="100px" width="100px">
+    </div>
   </body>
 </html>
