@@ -4,11 +4,50 @@ const path    = require('path')
 const port    = 3000
 
 
-app.use('/css', express.static(__dirname +'/css'));
 app.use(express.static('src'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + '/download.html')))
 
-app.get('/downloadBook', function (req, res) {
+app.post('/', function(req, res) {
+  if (req.files) {
+    var file = req.files.filename,
+        filename = file.name;
+    file.mv("./pdfFolder/" + filename, function(err) {
+      if(err) {
+        console.log(err)
+        res.send("error occurred")
+      }
+      else {
+        res.send("Done!")
+      }
+    })
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*app.get('/downloadBook', function (req, res) {
   res.download(__dirname + '/pdfFolder/Book.pdf', 'Book.pdf');
 })
 
@@ -22,7 +61,9 @@ app.get('/downloadbeetle', function (req, res) {
 
 app.get('/downloadcat', function (req, res) {
   res.download(__dirname + '/pdfFolder/cat.pdf', 'cat.pdf');
-})
+})*/
+
+
 
 
 app.listen(process.env.PORT || port, () => console.log(`App listening on port ${port}!`));

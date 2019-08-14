@@ -3,7 +3,7 @@
   <head>
     <title>Download PDFs</title>
     <style>
-      #links {
+      #buttons {
         text-align: center;
         z-index: 800;
         position: fixed;
@@ -13,6 +13,10 @@
         width: 100%;
         left: 50%;
         margin-left: -50%;
+      }
+
+      body {
+        color: white;
       }
 
       a:hover {
@@ -40,12 +44,11 @@
   <body>
     <div class='top'>
      <div id='container'>
-      <div id='links'>
-       <a href="/downloadBook" target="_blank">Download Book</a>
-       <a href="/downloadbee" target="_blank">Download Bee</a>
-       <a href="/downloadbeetle" target="_blank">Download Beetle</a>
-       <a href="/downloadcat" target="_blank">Download Cat</a>
-
+      <div id='buttons'>
+       <form method="post" enctype="multipart/form-data" action="/">
+         <input type="file" name="filename">
+         <input type="submit" value="upload">
+       </form>
       </div>
      </div>
      <img src="/pdfFolder/downloading.png" id='img' height="100px" width="100px">
